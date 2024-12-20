@@ -9,15 +9,18 @@ function TodoList() {
 
    const addTask = () => { setTodoItems([...todoItems, { id: todoItems.length, text: "New Task" }]);};
 
+   const tasks = todoItems.map(todo => <TodoItem key={todo.id} text={todo.text} />);
+
     return(
-    <>
-        {todoItems.map((todo) => (<TodoItem key={todo.id} text={todo.text} />))}
+    <div>
+        <ul>
+            {tasks}
+        </ul>
         <button onClick={addTask}>
             Add Task
         </button>
-    </>
+    </div>
     );
-
 }
 
 export default TodoList;

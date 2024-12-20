@@ -1,9 +1,18 @@
 
 
-function TodoItem(text = 'Default Task') {
+function TodoItem({text = 'Default Task'}) {
 
     return (
-            <p> {text} </p>
+        <li>
+            <hgroup>
+                <button>
+                    Tick
+                </button>
+                <p>
+                    {text}
+                </p>
+            </hgroup>
+        </li>
     );
 
 }
